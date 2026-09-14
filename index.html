@@ -1,241 +1,1066 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Arsalan Qureshi | UI/UX Designer & Full-Stack Developer</title>
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Lucide Icons -->
-  <script src="https://unpkg.com/lucide@latest"></script>
-  <!-- Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <script>
-    tailwind.config = {
-      darkMode: 'class',
-      theme: {
-        extend: {
-          fontFamily: {
-            sans: ['Inter', 'sans-serif'],
-          },
-          colors: {
-            brand: {
-              50: '#eff6ff',
-              500: '#3b82f6',
-              600: '#2563eb',
-              900: '#1e3a8a',
-            }
-          }
-        }
-      }
-    }
-  </script>
-  <style>
-    html { scroll-behavior: smooth; }
-    .glass {
-      background: rgba(15, 23, 42, 0.75);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Arsalan Qureshi | Front-End Developer</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
-<body class="bg-slate-950 text-slate-100 font-sans selection:bg-blue-600 selection:text-white antialiased">
 
-  <!-- Navigation Bar -->
-  <nav class="fixed top-0 left-0 right-0 z-50 glass border-b border-slate-800/80">
-    <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-      <a href="#" class="text-xl font-bold tracking-tight bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">
-        Arsalan Qureshi<span class="text-blue-500">.</span>
-      </a>
-      <div class="hidden md:flex space-x-8 text-sm font-medium text-slate-300">
-        <a href="#about" class="hover:text-blue-400 transition-colors">About</a>
-        <a href="#skills" class="hover:text-blue-400 transition-colors">Skills</a>
-        <a href="#projects" class="hover:text-blue-400 transition-colors">Projects</a>
-        <a href="#experience" class="hover:text-blue-400 transition-colors">Experience</a>
-        <a href="#contact" class="hover:text-blue-400 transition-colors">Contact</a>
-      </div>
-      <a href="tel:03103321891" class="hidden sm:inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-semibold bg-blue-600 text-white hover:bg-blue-500 transition-all shadow-lg shadow-blue-600/20">
-        <i data-lucide="phone" class="w-3.5 h-3.5"></i> Let's Talk
-      </a>
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header class="header">
+
+    <a href="#home" class="logo">
+        AQ<span>.</span>
+    </a>
+
+    <nav class="navbar">
+        <a href="#home" class="active">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#education">Journey</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="menu-icon">
+        <i class='bx bx-menu'></i>
     </div>
-  </nav>
 
-  <!-- Hero Section -->
-  <section class="min-h-screen pt-32 pb-20 flex items-center justify-center relative overflow-hidden px-6">
-    <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl -z-10"></div>
-    <div class="max-w-4xl mx-auto text-center">
-      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-blue-500/30 bg-blue-500/10 text-blue-400 text-xs font-medium mb-6">
-        <span class="w-2 h-2 rounded-full bg-blue-400 animate-pulse"></span>
-        Available for Full-Time & Freelance Projects
-      </div>
-      <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight mb-6 leading-tight">
-        Designing Products & Building <span class="bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 bg-clip-text text-transparent">Smart Experiences</span>
-      </h1>
-      <p class="text-base sm:text-lg text-slate-400 max-w-2xl mx-auto mb-10 leading-relaxed">
-        Software Engineer graduated from Sir Syed University of Engineering and Technology, Karachi. Specializing in UI/UX Design, Frontend Engineering, and Agentic AI applications.
-      </p>
-      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-        <a href="#projects" class="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-blue-600 hover:bg-blue-500 font-semibold text-sm transition-all shadow-lg shadow-blue-600/25 flex items-center justify-center gap-2">
-          View Projects <i data-lucide="arrow-right" class="w-4 h-4"></i>
-        </a>
-        <a href="#contact" class="w-full sm:w-auto px-8 py-3.5 rounded-xl border border-slate-700 bg-slate-900/50 hover:bg-slate-800 font-semibold text-sm text-slate-300 transition-all flex items-center justify-center gap-2">
-          Get in Touch
-        </a>
-      </div>
-    </div>
-  </section>
+</header>
 
-  <!-- About Section -->
-  <section id="about" class="py-20 border-t border-slate-800/60 px-6">
-    <div class="max-w-5xl mx-auto">
-      <div class="text-center mb-12">
-        <h2 class="text-xs uppercase font-bold text-blue-400 tracking-wider mb-2">Overview</h2>
-        <h3 class="text-3xl font-bold">About Me</h3>
-      </div>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 hover:border-slate-700 transition-all">
-          <div class="w-12 h-12 rounded-xl bg-blue-500/10 text-blue-400 flex items-center justify-center mb-4">
-            <i data-lucide="layout" class="w-6 h-6"></i>
-          </div>
-          <h4 class="text-lg font-semibold mb-2">UI/UX Design</h4>
-          <p class="text-sm text-slate-400">Crafting high-fidelity prototypes, interactive wireframes, and design systems with Figma.</p>
+
+<!-- ================= HOME ================= -->
+
+<section class="home" id="home">
+
+    <div class="home-content">
+
+        <div class="hero-badge">
+            <span></span>
+            Available for Work
         </div>
-        <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 hover:border-slate-700 transition-all">
-          <div class="w-12 h-12 rounded-xl bg-indigo-500/10 text-indigo-400 flex items-center justify-center mb-4">
-            <i data-lucide="code-2" class="w-6 h-6"></i>
-          </div>
-          <h4 class="text-lg font-semibold mb-2">Frontend Development</h4>
-          <p class="text-sm text-slate-400">Building fast, responsive web applications using HTML, CSS, JavaScript, Next.js, and WordPress.</p>
-        </div>
-        <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 hover:border-slate-700 transition-all">
-          <div class="w-12 h-12 rounded-xl bg-purple-500/10 text-purple-400 flex items-center justify-center mb-4">
-            <i data-lucide="bot" class="w-6 h-6"></i>
-          </div>
-          <h4 class="text-lg font-semibold mb-2">AI Agents & Workflows</h4>
-          <p class="text-sm text-slate-400">Deploying AI assistants using Voiceflow, Streamlit, Python, and Generative AI frameworks.</p>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- Skills Section -->
-  <section id="skills" class="py-20 border-t border-slate-800/60 px-6 bg-slate-900/20">
-    <div class="max-w-5xl mx-auto">
-      <div class="text-center mb-12">
-        <h2 class="text-xs uppercase font-bold text-blue-400 tracking-wider mb-2">Capabilities</h2>
-        <h3 class="text-3xl font-bold">Skills & Technologies</h3>
-      </div>
-      <div class="flex flex-wrap justify-center gap-3">
-        <span class="px-4 py-2.5 rounded-xl bg-slate-900 border border-slate-800 text-sm font-medium text-slate-300 flex items-center gap-2"><i data-lucide="figma" class="w-4 h-4 text-blue-400"></i> Figma</span>
-        <span class="px-4 py-2.5 rounded-xl bg-slate-900 border border-slate-800 text-sm font-medium text-slate-300 flex items-center gap-2"><i data-lucide="code" class="w-4 h-4 text-blue-400"></i> HTML5 / CSS3</span>
-        <span class="px-4 py-2.5 rounded-xl bg-slate-900 border border-slate-800 text-sm font-medium text-slate-300 flex items-center gap-2"><i data-lucide="terminal" class="w-4 h-4 text-blue-400"></i> JavaScript</span>
-        <span class="px-4 py-2.5 rounded-xl bg-slate-900 border border-slate-800 text-sm font-medium text-slate-300 flex items-center gap-2"><i data-lucide="globe" class="w-4 h-4 text-blue-400"></i> WordPress</span>
-        <span class="px-4 py-2.5 rounded-xl bg-slate-900 border border-slate-800 text-sm font-medium text-slate-300 flex items-center gap-2"><i data-lucide="file-code" class="w-4 h-4 text-blue-400"></i> Python</span>
-        <span class="px-4 py-2.5 rounded-xl bg-slate-900 border border-slate-800 text-sm font-medium text-slate-300 flex items-center gap-2"><i data-lucide="cpu" class="w-4 h-4 text-blue-400"></i> Voiceflow & Agentic AI</span>
-        <span class="px-4 py-2.5 rounded-xl bg-slate-900 border border-slate-800 text-sm font-medium text-slate-300 flex items-center gap-2"><i data-lucide="layers" class="w-4 h-4 text-blue-400"></i> Streamlit Framework</span>
-        <span class="px-4 py-2.5 rounded-xl bg-slate-900 border border-slate-800 text-sm font-medium text-slate-300 flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-blue-400"></i> Software Quality Engineering</span>
-      </div>
-    </div>
-  </section>
+        <p class="small-title">HELLO, I'M</p>
 
-  <!-- Projects Section -->
-  <section id="projects" class="py-20 border-t border-slate-800/60 px-6">
-    <div class="max-w-5xl mx-auto">
-      <div class="text-center mb-12">
-        <h2 class="text-xs uppercase font-bold text-blue-400 tracking-wider mb-2">Portfolio</h2>
-        <h3 class="text-3xl font-bold">Featured Projects</h3>
-      </div>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <!-- Project 1 -->
-        <div class="rounded-2xl bg-slate-900/60 border border-slate-800 overflow-hidden hover:border-slate-700 transition-all flex flex-col justify-between p-6">
-          <div>
-            <div class="flex items-center justify-between mb-4">
-              <span class="text-xs font-semibold px-2.5 py-1 rounded bg-blue-500/10 text-blue-400 border border-blue-500/20">Generative AI</span>
-              <i data-lucide="external-link" class="w-4 h-4 text-slate-500"></i>
+        <h1>
+            Arsalan
+            <span>Qureshi</span>
+        </h1>
+
+        <div class="typing-area">
+            <span>I'm a </span>
+            <strong>Front-End Developer</strong>
+        </div>
+
+        <p class="hero-description">
+            UX/UI Designer & Web Developer passionate about creating
+            modern, responsive and user-friendly digital experiences.
+            I build clean websites, attractive interfaces and
+            professional digital solutions.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="./RESUME ARSALAN 2024.pdf" class="btn primary-btn">
+                Download CV
+                <i class='bx bx-download'></i>
+            </a>
+
+            <a href="#contact" class="btn secondary-btn">
+                Let's Talk
+                <i class='bx bx-right-arrow-alt'></i>
+            </a>
+
+        </div>
+
+        <div class="social-links">
+
+            <a href="http://wa.me/923103321891" target="_blank">
+                <i class='bx bxl-whatsapp'></i>
+            </a>
+
+            <a href="https://www.facebook.com/Arsalanqureshi1997" target="_blank">
+                <i class='bx bxl-facebook'></i>
+            </a>
+
+            <a href="https://www.instagram.com/arxfamism._/" target="_blank">
+                <i class='bx bxl-instagram'></i>
+            </a>
+
+            <a href="https://youtube.com/@arsalanqureshi8400" target="_blank">
+                <i class='bx bxl-youtube'></i>
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- HERO IMAGE -->
+
+    <div class="hero-visual">
+
+        <div class="glow"></div>
+
+        <div class="profile-card">
+
+            <div class="profile-image">
+                <img src="img/about.jpeg" alt="Arsalan Qureshi">
             </div>
-            <h4 class="text-xl font-bold mb-2">ResearchBench AI</h4>
-            <p class="text-sm text-slate-400 mb-6 leading-relaxed">Multi-page Streamlit web application integrated with SQLite and AI tools built for HEC Aspire GenAI Hackathon.</p>
-          </div>
-          <div class="flex items-center gap-2 text-xs font-mono text-slate-400">
-            <span>Python</span> • <span>Streamlit</span> • <span>SQLite</span>
-          </div>
-        </div>
 
-        <!-- Project 2 -->
-        <div class="rounded-2xl bg-slate-900/60 border border-slate-800 overflow-hidden hover:border-slate-700 transition-all flex flex-col justify-between p-6">
-          <div>
-            <div class="flex items-center justify-between mb-4">
-              <span class="text-xs font-semibold px-2.5 py-1 rounded bg-purple-500/10 text-purple-400 border border-purple-500/20">Web App</span>
-              <i data-lucide="external-link" class="w-4 h-4 text-slate-500"></i>
+            <div class="profile-info">
+                <h3>Arsalan Qureshi</h3>
+                <p>Front-End Developer</p>
             </div>
-            <h4 class="text-xl font-bold mb-2">Universal File Converter</h4>
-            <p class="text-sm text-slate-400 mb-6 leading-relaxed">Privacy-first client-side web platform converting document and media formats directly in browser via WebAssembly.</p>
-          </div>
-          <div class="flex items-center gap-2 text-xs font-mono text-slate-400">
-            <span>Next.js</span> • <span>WebAssembly</span> • <span>Tailwind</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- Experience & Education -->
-  <section id="experience" class="py-20 border-t border-slate-800/60 px-6 bg-slate-900/20">
-    <div class="max-w-4xl mx-auto">
-      <div class="text-center mb-12">
-        <h2 class="text-xs uppercase font-bold text-blue-400 tracking-wider mb-2">Background</h2>
-        <h3 class="text-3xl font-bold">Experience & Education</h3>
-      </div>
-      <div class="space-y-8 relative before:absolute before:inset-0 before:left-3.5 before:w-0.5 before:bg-slate-800">
-        <!-- Item 1 -->
-        <div class="relative pl-10">
-          <div class="absolute left-0 top-1 w-7 h-7 rounded-full bg-slate-900 border border-blue-500 flex items-center justify-center">
-            <div class="w-2 h-2 rounded-full bg-blue-400"></div>
-          </div>
-          <h4 class="text-lg font-bold">Graphics & UI/UX Designer</h4>
-          <p class="text-xs text-blue-400 mb-2">Pics Official</p>
-          <p class="text-sm text-slate-400">Worked on graphical identity, interface wireframes, and creative design assets.</p>
-        </div>
-        <!-- Item 2 -->
-        <div class="relative pl-10">
-          <div class="absolute left-0 top-1 w-7 h-7 rounded-full bg-slate-900 border border-slate-700 flex items-center justify-center">
-            <div class="w-2 h-2 rounded-full bg-slate-500"></div>
-          </div>
-          <h4 class="text-lg font-bold">B.S. Software Engineering</h4>
-          <p class="text-xs text-blue-400 mb-2">Sir Syed University of Engineering and Technology, Karachi</p>
-          <p class="text-sm text-slate-400">Completed degree with specialized focus on software development, quality engineering, and web systems.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+            <div class="floating-card card-one">
 
-  <!-- Contact Section -->
-  <section id="contact" class="py-20 border-t border-slate-800/60 px-6">
-    <div class="max-w-3xl mx-auto text-center">
-      <h2 class="text-xs uppercase font-bold text-blue-400 tracking-wider mb-2">Get In Touch</h2>
-      <h3 class="text-3xl sm:text-4xl font-extrabold mb-6">Let's Build Something Together</h3>
-      <p class="text-slate-400 mb-8 text-sm sm:text-base">
-        Feel free to reach out for UI/UX design projects, full-stack web applications, or Generative AI collaborations.
-      </p>
-      <div class="inline-flex flex-col sm:flex-row items-center gap-4 bg-slate-900 border border-slate-800 p-4 rounded-2xl">
-        <a href="tel:03103321891" class="flex items-center gap-3 px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-500 font-medium text-sm transition-all w-full sm:w-auto justify-center">
-          <i data-lucide="phone" class="w-4 h-4"></i> 03103321891
+                <i class='bx bx-code-alt'></i>
+
+                <div>
+                    <strong>Web</strong>
+                    <small>Development</small>
+                </div>
+
+            </div>
+
+            <div class="floating-card card-two">
+
+                <i class='bx bx-palette'></i>
+
+                <div>
+                    <strong>UI / UX</strong>
+                    <small>Designer</small>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= ABOUT ================= -->
+
+<section class="about section" id="about">
+
+    <div class="section-heading">
+
+        <p>GET TO KNOW ME</p>
+
+        <h2>
+            About <span>Myself</span>
+        </h2>
+
+    </div>
+
+
+    <div class="about-container">
+
+        <div class="about-image">
+
+            <div class="image-border"></div>
+
+            <img src="img/about.jpeg" alt="Arsalan Qureshi">
+
+            <div class="experience-card">
+
+                <i class='bx bx-code-curly'></i>
+
+                <strong>Creative</strong>
+
+                <span>Developer</span>
+
+            </div>
+
+        </div>
+
+
+        <div class="about-content">
+
+            <span class="about-tag">
+                FRONT-END DEVELOPER
+            </span>
+
+            <h3>
+                Turning ideas into
+                <span>beautiful digital experiences.</span>
+            </h3>
+
+            <p>
+                It's Arsalan Qureshi and I am a Front-End Developer.
+                I have completed my Bachelor's degree in Software
+                Engineering from Sir Syed University, Karachi, Pakistan.
+            </p>
+
+            <p>
+                I have skills in WordPress Development, HTML, CSS,
+                JavaScript, UX/UI Designing, Figma and Framer.
+                I am a dedicated, organized and motivated individual
+                with a strong desire to learn and develop new skills.
+            </p>
+
+            <div class="about-skills">
+
+                <div>
+                    <i class='bx bx-check'></i>
+                    Web Development
+                </div>
+
+                <div>
+                    <i class='bx bx-check'></i>
+                    UI / UX Design
+                </div>
+
+                <div>
+                    <i class='bx bx-check'></i>
+                    WordPress
+                </div>
+
+                <div>
+                    <i class='bx bx-check'></i>
+                    Graphic Design
+                </div>
+
+            </div>
+
+            <a href="#contact" class="btn primary-btn">
+                Hire Me
+                <i class='bx bx-right-arrow-alt'></i>
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= SERVICES ================= -->
+
+<section class="services section" id="services">
+
+    <div class="section-heading">
+
+        <p>WHAT I DO</p>
+
+        <h2>
+            My <span>Services</span>
+        </h2>
+
+    </div>
+
+
+    <div class="services-container">
+
+
+        <div class="service-card">
+
+            <div class="service-icon">
+                <i class='bx bx-code-alt'></i>
+            </div>
+
+            <span class="service-number">01</span>
+
+            <h3>Web Development</h3>
+
+            <p>
+                Modern and responsive websites designed
+                for businesses, portfolios, blogs and
+                e-commerce platforms.
+            </p>
+
+            <ul>
+                <li>WordPress Websites</li>
+                <li>Business Websites</li>
+                <li>Portfolio Websites</li>
+                <li>E-Commerce Websites</li>
+            </ul>
+
+            <a href="#contact">
+                Learn More
+                <i class='bx bx-right-arrow-alt'></i>
+            </a>
+
+        </div>
+
+
+        <div class="service-card featured">
+
+            <div class="service-icon">
+                <i class='bx bx-palette'></i>
+            </div>
+
+            <span class="service-number">02</span>
+
+            <h3>UI / UX Design</h3>
+
+            <p>
+                Clean, attractive and user-friendly
+                interfaces focused on delivering
+                great user experiences.
+            </p>
+
+            <ul>
+                <li>Figma Designs</li>
+                <li>Web Designing</li>
+                <li>Interactive Designs</li>
+                <li>UX Research</li>
+            </ul>
+
+            <a href="#contact">
+                Learn More
+                <i class='bx bx-right-arrow-alt'></i>
+            </a>
+
+        </div>
+
+
+        <div class="service-card">
+
+            <div class="service-icon">
+                <i class='bx bx-file'></i>
+            </div>
+
+            <span class="service-number">03</span>
+
+            <h3>Resume & CV</h3>
+
+            <p>
+                Professional resumes and cover letters
+                designed to present your skills and
+                experience effectively.
+            </p>
+
+            <ul>
+                <li>Professional Resume</li>
+                <li>Chronological Resume</li>
+                <li>Functional Resume</li>
+                <li>Cover Letters</li>
+            </ul>
+
+            <a href="#contact">
+                Learn More
+                <i class='bx bx-right-arrow-alt'></i>
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= EDUCATION ================= -->
+
+<section class="education section" id="education">
+
+    <div class="section-heading">
+
+        <p>MY BACKGROUND</p>
+
+        <h2>
+            Education & <span>Journey</span>
+        </h2>
+
+    </div>
+
+
+    <div class="timeline-container">
+
+
+        <!-- EDUCATION -->
+
+        <div class="timeline-column">
+
+            <h3 class="timeline-title">
+
+                <i class='bx bxs-graduation'></i>
+
+                Education
+
+            </h3>
+
+
+            <div class="timeline">
+
+
+                <div class="timeline-item">
+
+                    <span class="timeline-dot"></span>
+
+                    <div class="timeline-card">
+
+                        <span class="timeline-date">
+                            2004 — 2014
+                        </span>
+
+                        <h3>Matriculation</h3>
+
+                        <h4>Saint Mary's High School</h4>
+
+                        <p>
+                            Sukkur, Sindh, Pakistan
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="timeline-item">
+
+                    <span class="timeline-dot"></span>
+
+                    <div class="timeline-card">
+
+                        <span class="timeline-date">
+                            2014 — 2016
+                        </span>
+
+                        <h3>Intermediate</h3>
+
+                        <h4>
+                            Govt. Islamia Science & Arts College
+                        </h4>
+
+                        <p>
+                            Sukkur, Sindh, Pakistan
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="timeline-item">
+
+                    <span class="timeline-dot"></span>
+
+                    <div class="timeline-card">
+
+                        <span class="timeline-date">
+                            2017 — 2021
+                        </span>
+
+                        <h3>Bachelor's Degree</h3>
+
+                        <h4>Software Engineering</h4>
+
+                        <p>
+                            Sir Syed University of Engineering
+                            & Technology — Karachi, Pakistan
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+        <!-- EXPERIENCE -->
+
+        <div class="timeline-column">
+
+            <h3 class="timeline-title">
+
+                <i class='bx bx-briefcase'></i>
+
+                Projects & Experience
+
+            </h3>
+
+
+            <div class="timeline">
+
+
+                <div class="timeline-item">
+
+                    <span class="timeline-dot"></span>
+
+                    <div class="timeline-card">
+
+                        <span class="timeline-date">
+                            2018 — 2019
+                        </span>
+
+                        <h3>Data Entry Operator</h3>
+
+                        <h4>Alies Traders PayDayDoc</h4>
+
+                        <p>
+                            1 year experience in data entry
+                            and office-related work.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="timeline-item">
+
+                    <span class="timeline-dot"></span>
+
+                    <div class="timeline-card">
+
+                        <span class="timeline-date">
+                            2021 — 2022
+                        </span>
+
+                        <h3>Professional Certifications</h3>
+
+                        <h4>Sistech, Sukkur</h4>
+
+                        <p>
+                            Professional certification in
+                            MS Office and Entrepreneurship.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="timeline-item">
+
+                    <span class="timeline-dot"></span>
+
+                    <div class="timeline-card">
+
+                        <span class="timeline-date">
+                            2019 — 2020
+                        </span>
+
+                        <h3>
+                            Accident Alert System — GO SAFE
+                        </h3>
+
+                        <h4>Final Year Project</h4>
+
+                        <p>
+                            Developed an accident detection
+                            system using Arduino Uno, GSM SIM900,
+                            GPS NEO 6M and vibration sensor.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= SKILLS ================= -->
+
+<section class="skills section" id="skills">
+
+    <div class="section-heading">
+
+        <p>MY EXPERTISE</p>
+
+        <h2>
+            My <span>Skills</span>
+        </h2>
+
+    </div>
+
+
+    <div class="skills-container">
+
+
+        <!-- CODING -->
+
+        <div class="skills-box">
+
+            <div class="skills-header">
+
+                <i class='bx bx-code-alt'></i>
+
+                <div>
+
+                    <h3>Coding Skills</h3>
+
+                    <p>Development technologies</p>
+
+                </div>
+
+            </div>
+
+
+            <div class="skill">
+
+                <div class="skill-info">
+                    <span>HTML</span>
+                    <span>90%</span>
+                </div>
+
+                <div class="skill-bar">
+                    <span style="width:90%"></span>
+                </div>
+
+            </div>
+
+
+            <div class="skill">
+
+                <div class="skill-info">
+                    <span>CSS</span>
+                    <span>80%</span>
+                </div>
+
+                <div class="skill-bar">
+                    <span style="width:80%"></span>
+                </div>
+
+            </div>
+
+
+            <div class="skill">
+
+                <div class="skill-info">
+                    <span>JavaScript</span>
+                    <span>65%</span>
+                </div>
+
+                <div class="skill-bar">
+                    <span style="width:65%"></span>
+                </div>
+
+            </div>
+
+
+            <div class="skill">
+
+                <div class="skill-info">
+                    <span>Python</span>
+                    <span>70%</span>
+                </div>
+
+                <div class="skill-bar">
+                    <span style="width:70%"></span>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- PROFESSIONAL -->
+
+        <div class="skills-box">
+
+            <div class="skills-header">
+
+                <i class='bx bx-brush'></i>
+
+                <div>
+
+                    <h3>Professional Skills</h3>
+
+                    <p>Creative & professional tools</p>
+
+                </div>
+
+            </div>
+
+
+            <div class="skill">
+
+                <div class="skill-info">
+                    <span>WordPress</span>
+                    <span>92%</span>
+                </div>
+
+                <div class="skill-bar">
+                    <span style="width:92%"></span>
+                </div>
+
+            </div>
+
+
+            <div class="skill">
+
+                <div class="skill-info">
+                    <span>UX / UI Design</span>
+                    <span>83%</span>
+                </div>
+
+                <div class="skill-bar">
+                    <span style="width:83%"></span>
+                </div>
+
+            </div>
+
+
+            <div class="skill">
+
+                <div class="skill-info">
+                    <span>Web Development</span>
+                    <span>69%</span>
+                </div>
+
+                <div class="skill-bar">
+                    <span style="width:69%"></span>
+                </div>
+
+            </div>
+
+
+            <div class="skill">
+
+                <div class="skill-info">
+                    <span>Figma / Framer</span>
+                    <span>80%</span>
+                </div>
+
+                <div class="skill-bar">
+                    <span style="width:80%"></span>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- CREATIVE -->
+
+        <div class="skills-box">
+
+            <div class="skills-header">
+
+                <i class='bx bx-star'></i>
+
+                <div>
+
+                    <h3>Creative Skills</h3>
+
+                    <p>Additional expertise</p>
+
+                </div>
+
+            </div>
+
+
+            <div class="skill">
+
+                <div class="skill-info">
+                    <span>Graphic Design</span>
+                    <span>90%</span>
+                </div>
+
+                <div class="skill-bar">
+                    <span style="width:90%"></span>
+                </div>
+
+            </div>
+
+
+            <div class="skill">
+
+                <div class="skill-info">
+                    <span>Social Media Marketing</span>
+                    <span>85%</span>
+                </div>
+
+                <div class="skill-bar">
+                    <span style="width:85%"></span>
+                </div>
+
+            </div>
+
+
+            <div class="skill">
+
+                <div class="skill-info">
+                    <span>Professional Resumes</span>
+                    <span>95%</span>
+                </div>
+
+                <div class="skill-bar">
+                    <span style="width:95%"></span>
+                </div>
+
+            </div>
+
+
+            <div class="skill">
+
+                <div class="skill-info">
+                    <span>Figma</span>
+                    <span>90%</span>
+                </div>
+
+                <div class="skill-bar">
+                    <span style="width:90%"></span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CONTACT ================= -->
+
+<section class="contact section" id="contact">
+
+    <div class="section-heading">
+
+        <p>LET'S WORK TOGETHER</p>
+
+        <h2>
+            Contact <span>Me</span>
+        </h2>
+
+    </div>
+
+
+    <div class="contact-container">
+
+
+        <div class="contact-info">
+
+            <span class="contact-tag">
+                GET IN TOUCH
+            </span>
+
+            <h3>
+                Have a project in
+                <span>mind?</span>
+            </h3>
+
+            <p>
+                If you have any work or project related
+                to web development, UI/UX design or
+                graphic design, feel free to contact me.
+            </p>
+
+
+            <div class="contact-item">
+
+                <div class="contact-icon">
+                    <i class='bx bx-envelope'></i>
+                </div>
+
+                <div>
+
+                    <small>Email</small>
+
+                    <p>sahilalee21@gmail.com</p>
+
+                </div>
+
+            </div>
+
+
+            <div class="contact-item">
+
+                <div class="contact-icon">
+                    <i class='bx bx-phone'></i>
+                </div>
+
+                <div>
+
+                    <small>Phone</small>
+
+                    <p>+92 310 3321891</p>
+
+                </div>
+
+            </div>
+
+
+            <div class="contact-item">
+
+                <div class="contact-icon">
+                    <i class='bx bx-map'></i>
+                </div>
+
+                <div>
+
+                    <small>Location</small>
+
+                    <p>Karachi, Pakistan</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- CONTACT FORM -->
+
+        <div class="contact-form">
+
+            <form id="contactForm">
+
+                <div class="input-row">
+
+                    <div class="input-box">
+
+                        <label>Name</label>
+
+                        <input
+                            type="text"
+                            id="name"
+                            placeholder="Your name"
+                            required>
+
+                    </div>
+
+
+                    <div class="input-box">
+
+                        <label>Email</label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            placeholder="Your email"
+                            required>
+
+                    </div>
+
+                </div>
+
+
+                <div class="input-row">
+
+                    <div class="input-box">
+
+                        <label>Mobile</label>
+
+                        <input
+                            type="text"
+                            id="mobile"
+                            placeholder="Your mobile number"
+                            required>
+
+                    </div>
+
+
+                    <div class="input-box">
+
+                        <label>Subject</label>
+
+                        <input
+                            type="text"
+                            id="subject"
+                            placeholder="Project subject"
+                            required>
+
+                    </div>
+
+                </div>
+
+
+                <div class="input-box">
+
+                    <label>Message</label>
+
+                    <textarea
+                        id="message"
+                        placeholder="Tell me about your project..."
+                        required></textarea>
+
+                </div>
+
+
+                <button type="submit" class="btn primary-btn">
+
+                    Send Message
+
+                    <i class='bx bx-send'></i>
+
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="footer">
+
+    <div class="footer-logo">
+        AQ<span>.</span>
+    </div>
+
+    <p>
+        Designed & Developed by
+        <strong>Arsalan Qureshi</strong>
+    </p>
+
+
+    <div class="footer-social">
+
+        <a href="http://wa.me/923103321891" target="_blank">
+            <i class='bx bxl-whatsapp'></i>
         </a>
-        <a href="https://github.com/arxfamism" target="_blank" class="flex items-center gap-3 px-6 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 font-medium text-sm transition-all w-full sm:w-auto justify-center">
-          <i data-lucide="github" class="w-4 h-4"></i> GitHub Profile
+
+        <a href="https://www.facebook.com/Arsalanqureshi1997" target="_blank">
+            <i class='bx bxl-facebook'></i>
         </a>
-      </div>
+
+        <a href="https://www.instagram.com/arxfamism._/" target="_blank">
+            <i class='bx bxl-instagram'></i>
+        </a>
+
+        <a href="https://youtube.com/@arsalanqureshi8400" target="_blank">
+            <i class='bx bxl-youtube'></i>
+        </a>
+
     </div>
-  </section>
 
-  <!-- Footer -->
-  <footer class="py-8 border-t border-slate-800/60 text-center text-xs text-slate-500">
-    <p>© Arsalan Qureshi. All rights reserved.</p>
-  </footer>
 
-  <!-- Icon Renderer Script -->
-  <script>
-    lucide.createIcons();
-  </script>
+    <p class="copyright">
+        © 2026 Arsalan Qureshi. All Rights Reserved.
+    </p>
+
+</footer>
+
+
+<!-- BACK TO TOP -->
+
+<a href="#home" class="back-top">
+    <i class='bx bx-up-arrow-alt'></i>
+</a>
+
+
+<script src="js/script.js"></script>
+
 </body>
 </html>
