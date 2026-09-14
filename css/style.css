@@ -861,3 +861,99 @@ section {
     display: flex;
     align-items: center;
     gap: 
+
+
+        /* ================================
+   JAVASCRIPT ANIMATIONS
+================================ */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+}
+
+.reveal.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* ================================
+   HEADER SCROLL EFFECT
+================================ */
+
+.header.scrolled {
+    background: rgba(7, 11, 20, 0.95);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
+}
+
+
+/* ================================
+   BACK TOP
+================================ */
+
+.back-top {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+}
+
+.back-top.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+
+/* ================================
+   TYPING CURSOR
+================================ */
+
+.typing-area strong::after {
+    content: "|";
+    margin-left: 4px;
+    color: var(--primary);
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+
+    0%,
+    50% {
+        opacity: 1;
+    }
+
+    51%,
+    100% {
+        opacity: 0;
+    }
+
+}
+
+
+/* ================================
+   PAGE LOAD
+================================ */
+
+body {
+    opacity: 1;
+}
+
+body.loaded {
+    animation: pageLoad 0.7s ease;
+}
+
+@keyframes pageLoad {
+
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+
+    }
