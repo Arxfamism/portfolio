@@ -1,84 +1,42 @@
-// ================================
-// MODERN PORTFOLIO JAVASCRIPT
-// ================================
+/* =========================================
+   HEADER / NAVBAR
+========================================= */
+
+const header = document.querySelector(".header");
+
+const menuBtn = document.querySelector("#menu-btn");
+
+const navbar = document.querySelector("#navbar");
+
+const navLinks = document.querySelectorAll(".navbar a");
+
+const sections = document.querySelectorAll("section[id]");
 
 
-// ================================
-// SELECT ELEMENTS
-// ================================
+/* Header scroll effect */
 
-const menuIcon = document.querySelector('.menu-icon');
-const navbar = document.querySelector('.navbar');
-const navLinks = document.querySelectorAll('.navbar a');
-const sections = document.querySelectorAll('section');
-const backTop = document.querySelector('.back-top');
+window.addEventListener("scroll", () => {
 
-
-// ================================
-// MOBILE MENU
-// ================================
-
-if (menuIcon) {
-
-    menuIcon.addEventListener('click', () => {
-
-        navbar.classList.toggle('active');
-
-        const icon = menuIcon.querySelector('i');
-
-        if (navbar.classList.contains('active')) {
-            icon.classList.remove('bx-menu');
-            icon.classList.add('bx-x');
-        } else {
-            icon.classList.remove('bx-x');
-            icon.classList.add('bx-menu');
-        }
-
-    });
-
-}
+    header.classList.toggle(
+        "scrolled",
+        window.scrollY > 30
+    );
 
 
-// ================================
-// CLOSE MENU AFTER CLICKING LINK
-// ================================
+    /* Active navigation */
 
-navLinks.forEach(link => {
+    let current = "";
 
-    link.addEventListener('click', () => {
-
-        navbar.classList.remove('active');
-
-        const icon = menuIcon?.querySelector('i');
-
-        if (icon) {
-            icon.classList.remove('bx-x');
-            icon.classList.add('bx-menu');
-        }
-
-    });
-
-});
-
-
-// ================================
-// ACTIVE NAVIGATION ON SCROLL
-// ================================
-
-window.addEventListener('scroll', () => {
-
-    let currentSection = '';
 
     sections.forEach(section => {
 
-        const sectionTop = section.offsetTop - 180;
-        const sectionHeight = section.offsetHeight;
+        const top =
+            section.offsetTop - 150;
 
-        if (
-            window.scrollY >= sectionTop &&
-            window.scrollY < sectionTop + sectionHeight
-        ) {
-            currentSection = section.getAttribute('id');
+        if(window.scrollY >= top){
+
+            current = section.id;
+
         }
 
     });
@@ -86,358 +44,291 @@ window.addEventListener('scroll', () => {
 
     navLinks.forEach(link => {
 
-        link.classList.remove('active');
-
-        const target = link.getAttribute('href');
-
-        if (target === `#${currentSection}`) {
-            link.classList.add('active');
-        }
+        link.classList.toggle(
+            "active",
+            link.getAttribute("href")
+            === `#${current}`
+        );
 
     });
 
 });
 
 
-// ================================
-// BACK TO TOP BUTTON
-// ================================
 
-window.addEventListener('scroll', () => {
+/* =========================================
+   MOBILE MENU
+========================================= */
 
-    if (backTop) {
+menuBtn.addEventListener("click", () => {
 
-        if (window.scrollY > 500) {
-            backTop.classList.add('show');
-        } else {
-            backTop.classList.remove('show');
-        }
+    const open =
+        navbar.classList.toggle("open");
 
-    }
+
+    menuBtn.setAttribute(
+        "aria-expanded",
+        open
+    );
+
+
+    menuBtn.innerHTML = open
+
+        ? "<i class='bx bx-x'></i>"
+
+        : "<i class='bx bx-menu'></i>";
 
 });
 
 
-// ================================
-// SMOOTH SCROLL
-// ================================
+/* Close menu after clicking */
 
 navLinks.forEach(link => {
 
-    link.addEventListener('click', function (event) {
+    link.addEventListener("click", () => {
 
-        const targetId = this.getAttribute('href');
+        navbar.classList.remove("open");
 
-        if (
-            targetId &&
-            targetId.startsWith('#') &&
-            targetId.length > 1
-        ) {
+        menuBtn.setAttribute(
+            "aria-expanded",
+            "false"
+        );
 
-            const targetSection = document.querySelector(targetId);
-
-            if (targetSection) {
-
-                event.preventDefault();
-
-                targetSection.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-
-            }
-
-        }
+        menuBtn.innerHTML =
+            "<i class='bx bx-menu'></i>";
 
     });
 
 });
 
 
-// ================================
-// TYPING EFFECT
-// ================================
 
-const typingText = document.querySelector('.typing-area strong');
+/* =========================================
+   TYPING ANIMATION
+========================================= */
 
-const typingWords = [
-    'Front-End Developer',
-    'UX/UI Designer',
-    'WordPress Developer',
-    'Web Developer',
-    'Creative Designer'
+const roles = [
+
+    "Front-End Developer",
+
+    "UI/UX Designer",
+
+    "WordPress Developer",
+
+    "Web Designer"
+
 ];
 
-let wordIndex = 0;
-let characterIndex = 0;
+
+const typingText =
+    document.querySelector("#typing-text");
+
+
+let roleIndex = 0;
+
+let charIndex = 0;
+
 let deleting = false;
 
 
-function typingEffect() {
+function typeRole(){
 
-    if (!typingText) return;
+    const current =
+        roles[roleIndex];
 
-    const currentWord = typingWords[wordIndex];
 
-    if (!deleting) {
+    if(!deleting){
+
+        charIndex++;
 
         typingText.textContent =
-            currentWord.substring(0, characterIndex + 1);
+            current.slice(0, charIndex);
 
-        characterIndex++;
 
-        if (characterIndex === currentWord.length) {
+        if(charIndex === current.length){
 
             deleting = true;
 
-            setTimeout(typingEffect, 1800);
+            setTimeout(
+                typeRole,
+                1500
+            );
 
             return;
-        }
-
-    } else {
-
-        typingText.textContent =
-            currentWord.substring(0, characterIndex - 1);
-
-        characterIndex--;
-
-        if (characterIndex === 0) {
-
-            deleting = false;
-
-            wordIndex++;
-
-            if (wordIndex >= typingWords.length) {
-                wordIndex = 0;
-            }
 
         }
 
     }
 
+    else{
+
+        charIndex--;
+
+        typingText.textContent =
+            current.slice(0, charIndex);
+
+
+        if(charIndex === 0){
+
+            deleting = false;
+
+            roleIndex =
+                (roleIndex + 1)
+                % roles.length;
+
+        }
+
+    }
+
+
     setTimeout(
-        typingEffect,
-        deleting ? 60 : 100
+
+        typeRole,
+
+        deleting
+            ? 45
+            : 80
+
     );
 
 }
 
-typingEffect();
+
+typeRole();
 
 
-// ================================
-// SCROLL REVEAL ANIMATION
-// ================================
 
-const revealElements = document.querySelectorAll(
-    '.section-heading, .about-image, .about-content, .service-card, .timeline-item, .skills-box, .contact-info, .contact-form'
-);
+/* =========================================
+   SCROLL REVEAL
+========================================= */
 
+const observer =
+    new IntersectionObserver(
 
-const revealObserver = new IntersectionObserver(
-    (entries, observer) => {
+        entries => {
 
-        entries.forEach(entry => {
+            entries.forEach(entry => {
 
-            if (entry.isIntersecting) {
+                if(entry.isIntersecting){
 
-                entry.target.classList.add('show');
+                    entry.target
+                        .classList
+                        .add("show");
 
-                observer.unobserve(entry.target);
+                    observer.unobserve(
+                        entry.target
+                    );
 
-            }
+                }
 
-        });
+            });
 
-    },
-    {
-        threshold: 0.12
-    }
-);
+        },
 
-
-revealElements.forEach(element => {
-
-    element.classList.add('reveal');
-
-    revealObserver.observe(element);
-
-});
-
-
-// ================================
-// SKILL BAR ANIMATION
-// ================================
-
-const skillBoxes = document.querySelectorAll('.skills-box');
-
-
-const skillObserver = new IntersectionObserver(
-    (entries, observer) => {
-
-        entries.forEach(entry => {
-
-            if (entry.isIntersecting) {
-
-                const bars =
-                    entry.target.querySelectorAll('.skill-bar span');
-
-                bars.forEach(bar => {
-
-                    const width = bar.style.width;
-
-                    bar.style.width = '0';
-
-                    setTimeout(() => {
-
-                        bar.style.width = width;
-
-                    }, 200);
-
-                });
-
-                observer.unobserve(entry.target);
-
-            }
-
-        });
-
-    },
-    {
-        threshold: 0.3
-    }
-);
-
-
-skillBoxes.forEach(box => {
-
-    skillObserver.observe(box);
-
-});
-
-
-// ================================
-// CONTACT FORM
-// ================================
-
-const contactForm = document.querySelector('#contactForm');
-
-
-if (contactForm) {
-
-    contactForm.addEventListener('submit', function (event) {
-
-        event.preventDefault();
-
-        const name =
-            document.querySelector('#name').value.trim();
-
-        const email =
-            document.querySelector('#email').value.trim();
-
-        const mobile =
-            document.querySelector('#mobile').value.trim();
-
-        const subject =
-            document.querySelector('#subject').value.trim();
-
-        const message =
-            document.querySelector('#message').value.trim();
-
-
-        if (
-            !name ||
-            !email ||
-            !mobile ||
-            !subject ||
-            !message
-        ) {
-
-            alert('Please fill in all fields.');
-
-            return;
-
+        {
+            threshold:0.12
         }
 
-
-        // Temporary mail action.
-        // Secure backend/API can be connected later.
-
-        const mailSubject =
-            encodeURIComponent(subject);
-
-        const mailBody =
-            encodeURIComponent(
-                `Name: ${name}\n` +
-                `Email: ${email}\n` +
-                `Mobile: ${mobile}\n\n` +
-                `Message:\n${message}`
-            );
+    );
 
 
-        window.location.href =
-            `mailto:sahilalee21@gmail.com?subject=${mailSubject}&body=${mailBody}`;
+document
+    .querySelectorAll(".reveal")
+    .forEach(element => {
+
+        observer.observe(element);
 
     });
 
-}
 
 
-// ================================
-// HEADER BACKGROUND ON SCROLL
-// ================================
+/* =========================================
+   CONTACT FORM
+========================================= */
 
-const header = document.querySelector('.header');
+/*
+   GitHub Pages is a static website.
 
+   Therefore we don't put SMTP passwords
+   inside JavaScript.
 
-window.addEventListener('scroll', () => {
-
-    if (!header) return;
-
-    if (window.scrollY > 50) {
-
-        header.classList.add('scrolled');
-
-    } else {
-
-        header.classList.remove('scrolled');
-
-    }
-
-});
+   Instead, this opens the visitor's
+   email application with the message
+   already prepared.
+*/
 
 
-// ================================
-// PREVENT MENU FROM STAYING OPEN
-// ================================
+document
+    .querySelector("#contact-form")
+    .addEventListener(
+        "submit",
+        function(event){
 
-window.addEventListener('resize', () => {
+            event.preventDefault();
 
-    if (window.innerWidth > 850) {
 
-        navbar.classList.remove('active');
+            const name =
+                document
+                .querySelector("#name")
+                .value
+                .trim();
 
-        const icon = menuIcon?.querySelector('i');
 
-        if (icon) {
+            const email =
+                document
+                .querySelector("#email")
+                .value
+                .trim();
 
-            icon.classList.remove('bx-x');
-            icon.classList.add('bx-menu');
+
+            const mobile =
+                document
+                .querySelector("#mobile")
+                .value
+                .trim();
+
+
+            const subject =
+                document
+                .querySelector("#subject")
+                .value
+                .trim();
+
+
+            const message =
+                document
+                .querySelector("#message")
+                .value
+                .trim();
+
+
+            const body =
+
+`Name: ${name}
+
+Email: ${email}
+
+Mobile: ${mobile}
+
+Message:
+
+${message}`;
+
+
+            const mailto =
+
+                `mailto:sahilalee21@gmail.com` +
+
+                `?subject=${
+                    encodeURIComponent(subject)
+                }` +
+
+                `&body=${
+                    encodeURIComponent(body)
+                }`;
+
+
+            window.location.href = mailto;
 
         }
-
-    }
-
-});
-
-
-// ================================
-// PAGE LOADED
-// ================================
-
-window.addEventListener('load', () => {
-
-    document.body.classList.add('loaded');
-
-});
+    );
