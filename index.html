@@ -4,16 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Arsalan Qureshi | Front-End Developer</title>
+    <meta name="description"
+        content="Arslan Qureshi - Front-End Developer, UI/UX Designer and WordPress Developer">
 
+    <title>Arslan Qureshi | Front-End Developer</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Boxicons -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+        rel="stylesheet">
+
+    <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
-
-    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
-
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 
 <body>
+
+<!-- Background Glow -->
+<div class="page-glow glow-one"></div>
+<div class="page-glow glow-two"></div>
+
 
 <!-- ================= HEADER ================= -->
 
@@ -23,82 +39,127 @@
         AQ<span>.</span>
     </a>
 
-    <nav class="navbar">
+    <button class="menu-btn" id="menu-btn" aria-label="Open menu">
+        <i class='bx bx-menu'></i>
+    </button>
+
+    <nav class="navbar" id="navbar">
+
         <a href="#home" class="active">Home</a>
         <a href="#about">About</a>
         <a href="#services">Services</a>
         <a href="#education">Journey</a>
         <a href="#skills">Skills</a>
         <a href="#contact">Contact</a>
-    </nav>
 
-    <div class="menu-icon">
-        <i class='bx bx-menu'></i>
-    </div>
+    </nav>
 
 </header>
 
 
-<!-- ================= HOME ================= -->
 
-<section class="home" id="home">
+<main>
 
-    <div class="home-content">
+<!-- ================= HERO ================= -->
 
-        <div class="hero-badge">
+<section class="hero section" id="home">
+
+    <div class="hero-content reveal">
+
+        <div class="availability">
             <span></span>
-            Available for Work
+            Available for opportunities
         </div>
 
-        <p class="small-title">HELLO, I'M</p>
+        <p class="eyebrow">
+            HELLO, I'M
+        </p>
 
         <h1>
-            Arsalan
+            Arslan
             <span>Qureshi</span>
         </h1>
 
-        <div class="typing-area">
-            <span>I'm a </span>
-            <strong>Front-End Developer</strong>
+        <div class="role">
+
+            <span class="role-label">
+                I'M A
+            </span>
+
+            <span id="typing-text">
+                Front-End Developer
+            </span>
+
+            <span class="cursor">|</span>
+
         </div>
 
-        <p class="hero-description">
-            UX/UI Designer & Web Developer passionate about creating
-            modern, responsive and user-friendly digital experiences.
-            I build clean websites, attractive interfaces and
-            professional digital solutions.
+        <p class="hero-text">
+
+            I build modern, responsive and user-friendly websites
+            with a focus on clean design, smooth experiences
+            and practical solutions.
+
         </p>
 
-        <div class="hero-buttons">
 
-            <a href="./RESUME ARSALAN 2024.pdf" class="btn primary-btn">
+        <div class="hero-actions">
+
+            <a href="./RESUME ARSALAN 2024.pdf"
+               class="btn primary"
+               download>
+
                 Download CV
                 <i class='bx bx-download'></i>
+
             </a>
 
-            <a href="#contact" class="btn secondary-btn">
+
+            <a href="#contact"
+               class="btn secondary">
+
                 Let's Talk
                 <i class='bx bx-right-arrow-alt'></i>
+
             </a>
 
         </div>
 
-        <div class="social-links">
 
-            <a href="http://wa.me/923103321891" target="_blank">
+        <!-- Social Links -->
+
+        <div class="socials">
+
+            <a href="https://wa.me/923103321891"
+               target="_blank"
+               rel="noopener">
+
                 <i class='bx bxl-whatsapp'></i>
+
             </a>
 
-            <a href="https://www.facebook.com/Arsalanqureshi1997" target="_blank">
+            <a href="https://www.facebook.com/Arsalanqureshi1997"
+               target="_blank"
+               rel="noopener">
+
                 <i class='bx bxl-facebook'></i>
+
             </a>
 
-            <a href="https://www.instagram.com/arxfamism._/" target="_blank">
+            <a href="https://www.instagram.com/arxfamism._/"
+               target="_blank"
+               rel="noopener">
+
                 <i class='bx bxl-instagram'></i>
+
             </a>
 
-            <a href="https://youtube.com/@arsalanqureshi8400" target="_blank">
+            <a href="https://youtube.com/@arsalanqureshi8400"
+               target="_blank"
+               rel="noopener">
+
                 <i class='bx bxl-youtube'></i>
+
             </a>
 
         </div>
@@ -106,24 +167,25 @@
     </div>
 
 
-    <!-- HERO IMAGE -->
 
-    <div class="hero-visual">
+    <!-- Hero Image -->
 
-        <div class="glow"></div>
+    <div class="hero-visual reveal">
+
+        <div class="profile-orbit orbit-a"></div>
+        <div class="profile-orbit orbit-b"></div>
 
         <div class="profile-card">
 
-            <div class="profile-image">
-                <img src="img/about.jpeg" alt="Arsalan Qureshi">
+            <div class="profile-image-wrap">
+
+                <img src="img/about.jpeg"
+                     alt="Arslan Qureshi">
+
             </div>
 
-            <div class="profile-info">
-                <h3>Arsalan Qureshi</h3>
-                <p>Front-End Developer</p>
-            </div>
 
-            <div class="floating-card card-one">
+            <div class="floating-card card-top">
 
                 <i class='bx bx-code-alt'></i>
 
@@ -134,13 +196,14 @@
 
             </div>
 
-            <div class="floating-card card-two">
+
+            <div class="floating-card card-bottom">
 
                 <i class='bx bx-palette'></i>
 
                 <div>
-                    <strong>UI / UX</strong>
-                    <small>Designer</small>
+                    <strong>UI/UX</strong>
+                    <small>Design</small>
                 </div>
 
             </div>
@@ -150,95 +213,102 @@
     </div>
 
 </section>
+
 
 
 <!-- ================= ABOUT ================= -->
 
-<section class="about section" id="about">
+<section class="section about" id="about">
 
-    <div class="section-heading">
+    <div class="section-heading reveal">
 
-        <p>GET TO KNOW ME</p>
+        <p class="eyebrow">
+            GET TO KNOW ME
+        </p>
 
         <h2>
-            About <span>Myself</span>
+            About
+            <span>Myself</span>
         </h2>
 
     </div>
 
 
-    <div class="about-container">
+    <div class="about-grid">
 
-        <div class="about-image">
+        <div class="about-image reveal">
 
-            <div class="image-border"></div>
+            <div class="image-frame">
 
-            <img src="img/about.jpeg" alt="Arsalan Qureshi">
+                <img src="img/about.jpeg"
+                     alt="Arslan Qureshi portrait">
 
-            <div class="experience-card">
+            </div>
 
-                <i class='bx bx-code-curly'></i>
 
-                <strong>Creative</strong>
+            <div class="experience-badge">
 
-                <span>Developer</span>
+                <strong>BS</strong>
+
+                <span>
+                    Software<br>
+                    Engineering
+                </span>
 
             </div>
 
         </div>
 
 
-        <div class="about-content">
+        <div class="about-content reveal">
 
-            <span class="about-tag">
-                FRONT-END DEVELOPER
-            </span>
+            <p class="lead">
 
-            <h3>
-                Turning ideas into
-                <span>beautiful digital experiences.</span>
-            </h3>
+                Front-End Developer & UI/UX Designer
+                passionate about turning ideas into
+                clean and engaging digital experiences.
 
-            <p>
-                It's Arsalan Qureshi and I am a Front-End Developer.
-                I have completed my Bachelor's degree in Software
-                Engineering from Sir Syed University, Karachi, Pakistan.
             </p>
 
+
             <p>
-                I have skills in WordPress Development, HTML, CSS,
-                JavaScript, UX/UI Designing, Figma and Framer.
-                I am a dedicated, organized and motivated individual
-                with a strong desire to learn and develop new skills.
+
+                I'm Arslan Qureshi, a Software Engineering
+                graduate from Sir Syed University, Karachi.
+                I work with HTML, CSS, JavaScript, WordPress,
+                Figma and modern web design principles.
+
             </p>
 
-            <div class="about-skills">
 
-                <div>
-                    <i class='bx bx-check'></i>
-                    Web Development
-                </div>
+            <p>
 
-                <div>
-                    <i class='bx bx-check'></i>
-                    UI / UX Design
-                </div>
+                I am organized, dependable and always interested
+                in learning new technologies. I enjoy solving
+                problems, improving interfaces and creating
+                websites that look great on every screen.
 
-                <div>
-                    <i class='bx bx-check'></i>
-                    WordPress
-                </div>
+            </p>
 
-                <div>
-                    <i class='bx bx-check'></i>
-                    Graphic Design
-                </div>
+
+            <div class="about-tags">
+
+                <span>HTML & CSS</span>
+                <span>JavaScript</span>
+                <span>WordPress</span>
+                <span>Figma</span>
+                <span>Framer</span>
+                <span>Responsive Design</span>
 
             </div>
 
-            <a href="#contact" class="btn primary-btn">
+
+            <a href="#contact"
+               class="btn primary">
+
                 Hire Me
-                <i class='bx bx-right-arrow-alt'></i>
+                <i class='bx bx-send'></i>
+
             </a>
 
         </div>
@@ -246,821 +316,141 @@
     </div>
 
 </section>
+
 
 
 <!-- ================= SERVICES ================= -->
 
-<section class="services section" id="services">
+<section class="section services" id="services">
 
-    <div class="section-heading">
+    <div class="section-heading reveal">
 
-        <p>WHAT I DO</p>
-
-        <h2>
-            My <span>Services</span>
-        </h2>
-
-    </div>
-
-
-    <div class="services-container">
-
-
-        <div class="service-card">
-
-            <div class="service-icon">
-                <i class='bx bx-code-alt'></i>
-            </div>
-
-            <span class="service-number">01</span>
-
-            <h3>Web Development</h3>
-
-            <p>
-                Modern and responsive websites designed
-                for businesses, portfolios, blogs and
-                e-commerce platforms.
-            </p>
-
-            <ul>
-                <li>WordPress Websites</li>
-                <li>Business Websites</li>
-                <li>Portfolio Websites</li>
-                <li>E-Commerce Websites</li>
-            </ul>
-
-            <a href="#contact">
-                Learn More
-                <i class='bx bx-right-arrow-alt'></i>
-            </a>
-
-        </div>
-
-
-        <div class="service-card featured">
-
-            <div class="service-icon">
-                <i class='bx bx-palette'></i>
-            </div>
-
-            <span class="service-number">02</span>
-
-            <h3>UI / UX Design</h3>
-
-            <p>
-                Clean, attractive and user-friendly
-                interfaces focused on delivering
-                great user experiences.
-            </p>
-
-            <ul>
-                <li>Figma Designs</li>
-                <li>Web Designing</li>
-                <li>Interactive Designs</li>
-                <li>UX Research</li>
-            </ul>
-
-            <a href="#contact">
-                Learn More
-                <i class='bx bx-right-arrow-alt'></i>
-            </a>
-
-        </div>
-
-
-        <div class="service-card">
-
-            <div class="service-icon">
-                <i class='bx bx-file'></i>
-            </div>
-
-            <span class="service-number">03</span>
-
-            <h3>Resume & CV</h3>
-
-            <p>
-                Professional resumes and cover letters
-                designed to present your skills and
-                experience effectively.
-            </p>
-
-            <ul>
-                <li>Professional Resume</li>
-                <li>Chronological Resume</li>
-                <li>Functional Resume</li>
-                <li>Cover Letters</li>
-            </ul>
-
-            <a href="#contact">
-                Learn More
-                <i class='bx bx-right-arrow-alt'></i>
-            </a>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ================= EDUCATION ================= -->
-
-<section class="education section" id="education">
-
-    <div class="section-heading">
-
-        <p>MY BACKGROUND</p>
+        <p class="eyebrow">
+            WHAT I DO
+        </p>
 
         <h2>
-            Education & <span>Journey</span>
+            My
+            <span>Services</span>
         </h2>
 
-    </div>
-
-
-    <div class="timeline-container">
-
-
-        <!-- EDUCATION -->
-
-        <div class="timeline-column">
-
-            <h3 class="timeline-title">
-
-                <i class='bx bxs-graduation'></i>
-
-                Education
-
-            </h3>
-
-
-            <div class="timeline">
-
-
-                <div class="timeline-item">
-
-                    <span class="timeline-dot"></span>
-
-                    <div class="timeline-card">
-
-                        <span class="timeline-date">
-                            2004 — 2014
-                        </span>
-
-                        <h3>Matriculation</h3>
-
-                        <h4>Saint Mary's High School</h4>
-
-                        <p>
-                            Sukkur, Sindh, Pakistan
-                        </p>
-
-                    </div>
-
-                </div>
-
-
-                <div class="timeline-item">
-
-                    <span class="timeline-dot"></span>
-
-                    <div class="timeline-card">
-
-                        <span class="timeline-date">
-                            2014 — 2016
-                        </span>
-
-                        <h3>Intermediate</h3>
-
-                        <h4>
-                            Govt. Islamia Science & Arts College
-                        </h4>
-
-                        <p>
-                            Sukkur, Sindh, Pakistan
-                        </p>
-
-                    </div>
-
-                </div>
-
-
-                <div class="timeline-item">
-
-                    <span class="timeline-dot"></span>
-
-                    <div class="timeline-card">
-
-                        <span class="timeline-date">
-                            2017 — 2021
-                        </span>
-
-                        <h3>Bachelor's Degree</h3>
-
-                        <h4>Software Engineering</h4>
-
-                        <p>
-                            Sir Syed University of Engineering
-                            & Technology — Karachi, Pakistan
-                        </p>
-
-                    </div>
-
-                </div>
-
-
-            </div>
-
-        </div>
-
-
-        <!-- EXPERIENCE -->
-
-        <div class="timeline-column">
-
-            <h3 class="timeline-title">
-
-                <i class='bx bx-briefcase'></i>
-
-                Projects & Experience
-
-            </h3>
-
-
-            <div class="timeline">
-
-
-                <div class="timeline-item">
-
-                    <span class="timeline-dot"></span>
-
-                    <div class="timeline-card">
-
-                        <span class="timeline-date">
-                            2018 — 2019
-                        </span>
-
-                        <h3>Data Entry Operator</h3>
-
-                        <h4>Alies Traders PayDayDoc</h4>
-
-                        <p>
-                            1 year experience in data entry
-                            and office-related work.
-                        </p>
-
-                    </div>
-
-                </div>
-
-
-                <div class="timeline-item">
-
-                    <span class="timeline-dot"></span>
-
-                    <div class="timeline-card">
-
-                        <span class="timeline-date">
-                            2021 — 2022
-                        </span>
-
-                        <h3>Professional Certifications</h3>
-
-                        <h4>Sistech, Sukkur</h4>
-
-                        <p>
-                            Professional certification in
-                            MS Office and Entrepreneurship.
-                        </p>
-
-                    </div>
-
-                </div>
-
-
-                <div class="timeline-item">
-
-                    <span class="timeline-dot"></span>
-
-                    <div class="timeline-card">
-
-                        <span class="timeline-date">
-                            2019 — 2020
-                        </span>
-
-                        <h3>
-                            Accident Alert System — GO SAFE
-                        </h3>
-
-                        <h4>Final Year Project</h4>
-
-                        <p>
-                            Developed an accident detection
-                            system using Arduino Uno, GSM SIM900,
-                            GPS NEO 6M and vibration sensor.
-                        </p>
-
-                    </div>
-
-                </div>
-
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ================= SKILLS ================= -->
-
-<section class="skills section" id="skills">
-
-    <div class="section-heading">
-
-        <p>MY EXPERTISE</p>
-
-        <h2>
-            My <span>Skills</span>
-        </h2>
+        <p>
+            Professional digital services for individuals,
+            startups and businesses.
+        </p>
 
     </div>
 
 
-    <div class="skills-container">
+    <div class="services-grid">
 
 
-        <!-- CODING -->
+        <!-- Service 1 -->
 
-        <div class="skills-box">
+        <article class="service-card reveal">
 
-            <div class="skills-header">
+            <div class="service-icon">
 
                 <i class='bx bx-code-alt'></i>
 
-                <div>
-
-                    <h3>Coding Skills</h3>
-
-                    <p>Development technologies</p>
-
-                </div>
-
             </div>
 
-
-            <div class="skill">
-
-                <div class="skill-info">
-                    <span>HTML</span>
-                    <span>90%</span>
-                </div>
-
-                <div class="skill-bar">
-                    <span style="width:90%"></span>
-                </div>
-
-            </div>
-
-
-            <div class="skill">
-
-                <div class="skill-info">
-                    <span>CSS</span>
-                    <span>80%</span>
-                </div>
-
-                <div class="skill-bar">
-                    <span style="width:80%"></span>
-                </div>
-
-            </div>
-
-
-            <div class="skill">
-
-                <div class="skill-info">
-                    <span>JavaScript</span>
-                    <span>65%</span>
-                </div>
-
-                <div class="skill-bar">
-                    <span style="width:65%"></span>
-                </div>
-
-            </div>
-
-
-            <div class="skill">
-
-                <div class="skill-info">
-                    <span>Python</span>
-                    <span>70%</span>
-                </div>
-
-                <div class="skill-bar">
-                    <span style="width:70%"></span>
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <!-- PROFESSIONAL -->
-
-        <div class="skills-box">
-
-            <div class="skills-header">
-
-                <i class='bx bx-brush'></i>
-
-                <div>
-
-                    <h3>Professional Skills</h3>
-
-                    <p>Creative & professional tools</p>
-
-                </div>
-
-            </div>
-
-
-            <div class="skill">
-
-                <div class="skill-info">
-                    <span>WordPress</span>
-                    <span>92%</span>
-                </div>
-
-                <div class="skill-bar">
-                    <span style="width:92%"></span>
-                </div>
-
-            </div>
-
-
-            <div class="skill">
-
-                <div class="skill-info">
-                    <span>UX / UI Design</span>
-                    <span>83%</span>
-                </div>
-
-                <div class="skill-bar">
-                    <span style="width:83%"></span>
-                </div>
-
-            </div>
-
-
-            <div class="skill">
-
-                <div class="skill-info">
-                    <span>Web Development</span>
-                    <span>69%</span>
-                </div>
-
-                <div class="skill-bar">
-                    <span style="width:69%"></span>
-                </div>
-
-            </div>
-
-
-            <div class="skill">
-
-                <div class="skill-info">
-                    <span>Figma / Framer</span>
-                    <span>80%</span>
-                </div>
-
-                <div class="skill-bar">
-                    <span style="width:80%"></span>
-                </div>
-
-            </div>
-
-        </div>
-
-
-        <!-- CREATIVE -->
-
-        <div class="skills-box">
-
-            <div class="skills-header">
-
-                <i class='bx bx-star'></i>
-
-                <div>
-
-                    <h3>Creative Skills</h3>
-
-                    <p>Additional expertise</p>
-
-                </div>
-
-            </div>
-
-
-            <div class="skill">
-
-                <div class="skill-info">
-                    <span>Graphic Design</span>
-                    <span>90%</span>
-                </div>
-
-                <div class="skill-bar">
-                    <span style="width:90%"></span>
-                </div>
-
-            </div>
-
-
-            <div class="skill">
-
-                <div class="skill-info">
-                    <span>Social Media Marketing</span>
-                    <span>85%</span>
-                </div>
-
-                <div class="skill-bar">
-                    <span style="width:85%"></span>
-                </div>
-
-            </div>
-
-
-            <div class="skill">
-
-                <div class="skill-info">
-                    <span>Professional Resumes</span>
-                    <span>95%</span>
-                </div>
-
-                <div class="skill-bar">
-                    <span style="width:95%"></span>
-                </div>
-
-            </div>
-
-
-            <div class="skill">
-
-                <div class="skill-info">
-                    <span>Figma</span>
-                    <span>90%</span>
-                </div>
-
-                <div class="skill-bar">
-                    <span style="width:90%"></span>
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ================= CONTACT ================= -->
-
-<section class="contact section" id="contact">
-
-    <div class="section-heading">
-
-        <p>LET'S WORK TOGETHER</p>
-
-        <h2>
-            Contact <span>Me</span>
-        </h2>
-
-    </div>
-
-
-    <div class="contact-container">
-
-
-        <div class="contact-info">
-
-            <span class="contact-tag">
-                GET IN TOUCH
+            <span class="service-number">
+                01
             </span>
 
             <h3>
-                Have a project in
-                <span>mind?</span>
+                Web Development
             </h3>
 
             <p>
-                If you have any work or project related
-                to web development, UI/UX design or
-                graphic design, feel free to contact me.
+
+                Responsive websites designed for performance,
+                usability and a polished modern look.
+
             </p>
 
 
-            <div class="contact-item">
+            <ul>
 
-                <div class="contact-icon">
-                    <i class='bx bx-envelope'></i>
-                </div>
+                <li>Business websites</li>
+                <li>Portfolio websites</li>
+                <li>WordPress websites</li>
+                <li>E-commerce websites</li>
 
-                <div>
+            </ul>
 
-                    <small>Email</small>
-
-                    <p>sahilalee21@gmail.com</p>
-
-                </div>
-
-            </div>
+        </article>
 
 
-            <div class="contact-item">
 
-                <div class="contact-icon">
-                    <i class='bx bx-phone'></i>
-                </div>
+        <!-- Service 2 -->
 
-                <div>
+        <article class="service-card reveal">
 
-                    <small>Phone</small>
+            <div class="service-icon">
 
-                    <p>+92 310 3321891</p>
-
-                </div>
+                <i class='bx bx-palette'></i>
 
             </div>
 
+            <span class="service-number">
+                02
+            </span>
 
-            <div class="contact-item">
+            <h3>
+                UI/UX & Graphic Design
+            </h3>
 
-                <div class="contact-icon">
-                    <i class='bx bx-map'></i>
-                </div>
+            <p>
 
-                <div>
+                Clean interfaces and visual designs
+                focused on clarity, branding and
+                user experience.
 
-                    <small>Location</small>
+            </p>
 
-                    <p>Karachi, Pakistan</p>
 
-                </div>
+            <ul>
+
+                <li>Figma UI designs</li>
+                <li>Website design</li>
+                <li>Interactive prototypes</li>
+                <li>Logo & marketing design</li>
+
+            </ul>
+
+        </article>
+
+
+
+        <!-- Service 3 -->
+
+        <article class="service-card reveal">
+
+            <div class="service-icon">
+
+                <i class='bx bx-file-blank'></i>
 
             </div>
 
-        </div>
+            <span class="service-number">
+                03
+            </span>
+
+            <h3>
+                Resume & Cover Letter
+            </h3>
+
+            <p>
+
+                Professional career documents tailored
+                to present skills and experience clearly.
+
+            </p>
 
 
-        <!-- CONTACT FORM -->
+            <ul>
 
-        <div class="contact-form">
-
-            <form id="contactForm">
-
-                <div class="input-row">
-
-                    <div class="input-box">
-
-                        <label>Name</label>
-
-                        <input
-                            type="text"
-                            id="name"
-                            placeholder="Your name"
-                            required>
-
-                    </div>
-
-
-                    <div class="input-box">
-
-                        <label>Email</label>
-
-                        <input
-                            type="email"
-                            id="email"
-                            placeholder="Your email"
-                            required>
-
-                    </div>
-
-                </div>
-
-
-                <div class="input-row">
-
-                    <div class="input-box">
-
-                        <label>Mobile</label>
-
-                        <input
-                            type="text"
-                            id="mobile"
-                            placeholder="Your mobile number"
-                            required>
-
-                    </div>
-
-
-                    <div class="input-box">
-
-                        <label>Subject</label>
-
-                        <input
-                            type="text"
-                            id="subject"
-                            placeholder="Project subject"
-                            required>
-
-                    </div>
-
-                </div>
-
-
-                <div class="input-box">
-
-                    <label>Message</label>
-
-                    <textarea
-                        id="message"
-                        placeholder="Tell me about your project..."
-                        required></textarea>
-
-                </div>
-
-
-                <button type="submit" class="btn primary-btn">
-
-                    Send Message
-
-                    <i class='bx bx-send'></i>
-
-                </button>
-
-            </form>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ================= FOOTER ================= -->
-
-<footer class="footer">
-
-    <div class="footer-logo">
-        AQ<span>.</span>
-    </div>
-
-    <p>
-        Designed & Developed by
-        <strong>Arsalan Qureshi</strong>
-    </p>
-
-
-    <div class="footer-social">
-
-        <a href="http://wa.me/923103321891" target="_blank">
-            <i class='bx bxl-whatsapp'></i>
-        </a>
-
-        <a href="https://www.facebook.com/Arsalanqureshi1997" target="_blank">
-            <i class='bx bxl-facebook'></i>
-        </a>
-
-        <a href="https://www.instagram.com/arxfamism._/" target="_blank">
-            <i class='bx bxl-instagram'></i>
-        </a>
-
-        <a href="https://youtube.com/@arsalanqureshi8400" target="_blank">
-            <i class='bx bxl-youtube'></i>
-        </a>
-
-    </div>
-
-
-    <p class="copyright">
-        © 2026 Arsalan Qureshi. All Rights Reserved.
-    </p>
-
-</footer>
-
-
-<!-- BACK TO TOP -->
-
-<a href="#home" class="back-top">
-    <i class='bx bx-up-arrow-alt'></i>
-</a>
-
-
-<script src="js/script.js"></script>
-
-</body>
-</html>
+                <li>Chronological resumes</li>
+                <li>Functional resumes</li
